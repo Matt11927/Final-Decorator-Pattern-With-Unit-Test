@@ -3,6 +3,6 @@ package Resturant;
 public class Burger implements FoodItem {
     @Override
     public double getCost() {
-        return 0;
+        return 2.89;
     }
 }
