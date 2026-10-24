@@ -65,5 +65,30 @@ public class TestFoodPricing {
         assertEquals(expected,actual, 0.001);
     }
 
+    @Test
+    public void testHotDogWithKetchupCost(){
+        FoodItem hotDog = new Ketchup( new HotDog());
+        double actual = hotDog.getCost();
+        double expected = 1.56; // 1.50+0.06 == 1.56
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testHotDogWithCheeseCost(){
+        FoodItem hotDog = new Cheese( new HotDog());
+        double actual = hotDog.getCost();
+        double expected = 3; // 1.50+1.50 == 3
+        assertEquals(expected,actual, 0.001); //fix rounding
+    }
+
+    @Test
+    public void testHotDogWithOnionsCost(){
+        FoodItem hotDog = new Onions( new HotDog());
+        double actual = hotDog.getCost();
+        double expected = 3.69; // 1.50+2.19 == 3.69
+        assertEquals(expected,actual, 0.001); //fix rounding
+    }
+
+
 
 }
