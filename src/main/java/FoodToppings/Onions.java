@@ -1,4 +1,4 @@
-package FoodToppins;
+package FoodToppings;
 
 public class Onions {
 }
