@@ -1,12 +1,7 @@
-import Customer.CustomerOrder;
-import Customer.LoyalCustomer;
-import FoodToppings.Cheese;
-import FoodToppings.Ketchup;
-import FoodToppings.Onions;
-import Resturant.Burger;
-import Resturant.FoodItem;
-import Resturant.Fries;
-import Resturant.HotDog;
+import Resturant.*;
+import FoodToppings.*;
+import Customer.*;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TestFoodPricing {
