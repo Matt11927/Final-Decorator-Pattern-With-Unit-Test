@@ -1,3 +1,4 @@
+import Customer.CustomerOrder;
 import FoodToppings.Cheese;
 import FoodToppings.Ketchup;
 import FoodToppings.Onions;
@@ -89,6 +90,19 @@ public class TestFoodPricing {
         assertEquals(expected,actual, 0.001); //fix rounding
     }
 
+    @Test
+    public void testOrderTotalBurgerFriesCost(){
+
+        CustomerOrder order = new CustomerOrder();
+
+        order.addItem(new Burger());
+        order.addItem(new Fries());
+
+        double expected = 4.01; //2.89+1.12
+        double actual = order.calculateTotal();
+
+        assertEquals(expected, actual, 0.001);
+    }
 
 
 }
