@@ -14,7 +14,9 @@ public class CustomerOrder {
 
         double total = 0;
 
-
+        for(FoodItem item : items){
+            total += item.getCost();
+        }
 
         return total;
     }
