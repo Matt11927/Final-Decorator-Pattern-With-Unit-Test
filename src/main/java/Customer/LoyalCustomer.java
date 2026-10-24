@@ -9,6 +9,6 @@ public class LoyalCustomer {
     }
 
     public double applyDiscount(double totalCost) {
-        return 0;
+        return totalCost - (totalCost * productDiscount);
     }
 }

@@ -120,7 +120,7 @@ public class TestFoodPricing {
     }
 
     @Test
-    public void testCustomerDiscount() {
+    public void testCustomerDiscountWithBurger() {
         FoodItem burger = new Burger();
         double burgerPrice = burger.getCost();
         LoyalCustomer loyalCustomer = new LoyalCustomer(0.25);
