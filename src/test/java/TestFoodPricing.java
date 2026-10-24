@@ -17,5 +17,13 @@ public class TestFoodPricing {
         assertEquals(expected,actual);
     }
 
+    @Test
+    public void testBurgerWithKetchupCost(){
+        FoodItem burger = new Ketchup( new Burger());
+        double actual = burger.getCost();
+        double expected = 2.95; // 2.89+0.06 == 2.95
+        assertEquals(expected,actual);
+    }
+
 
 }
