@@ -10,6 +10,6 @@ public class Onions extends MealDecorator {
 
     @Override
     public double getCost() {
-        return 0;
+        return foodItem.getCost() + 2.19;
     }
 }
