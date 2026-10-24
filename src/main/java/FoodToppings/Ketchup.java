@@ -10,6 +10,6 @@ public class Ketchup extends MealDecorator {
 
     @Override
     public double getCost() {
-        return 0;
+        return foodItem.getCost() + 0.06;
     }
 }
