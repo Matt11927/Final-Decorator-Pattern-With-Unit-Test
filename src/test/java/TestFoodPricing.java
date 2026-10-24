@@ -1,4 +1,5 @@
 import Customer.CustomerOrder;
+import Customer.LoyalCustomer;
 import FoodToppings.Cheese;
 import FoodToppings.Ketchup;
 import FoodToppings.Onions;
@@ -115,6 +116,16 @@ public class TestFoodPricing {
         double expected = 4.45; //1.50+0.06+2.89
         double actual = order.calculateTotal();
 
+        assertEquals(expected, actual, 0.001);
+    }
+
+    @Test
+    public void testCustomerDiscount() {
+        FoodItem burger = new Burger();
+        double burgerPrice = burger.getCost();
+        LoyalCustomer loyalCustomer = new LoyalCustomer(0.25);
+        double actual = loyalCustomer.applyDiscount(burgerPrice);
+        double expected = 2.1675;
         assertEquals(expected, actual, 0.001);
     }
 
