@@ -11,6 +11,6 @@ public class Cheese extends MealDecorator {
 
     @Override
     public double getCost() {
-        return 0;
+        return foodItem.getCost() + 1.50;
     }
 }
