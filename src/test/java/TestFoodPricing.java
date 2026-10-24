@@ -104,5 +104,19 @@ public class TestFoodPricing {
         assertEquals(expected, actual, 0.001);
     }
 
+    @Test
+    public void testOrderWithToppings(){
+
+        CustomerOrder order = new CustomerOrder();
+        FoodItem burger = new Cheese(new Ketchup(new Burger()));
+
+        order.addItem(burger);
+
+        double expected = 4.45; //1.50+0.06+2.89
+        double actual = order.calculateTotal();
+
+        assertEquals(expected, actual, 0.001);
+    }
+
 
 }
