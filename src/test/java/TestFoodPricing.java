@@ -33,5 +33,13 @@ public class TestFoodPricing {
         assertEquals(expected,actual, 0.001); //fix rounding
     }
 
+    @Test
+    public void testBurgerWithOnionsCost(){
+        FoodItem burger = new Onions( new Burger());
+        double actual = burger.getCost();
+        double expected = 5.08; // 2.89+2.19 == 4.39
+        assertEquals(expected,actual, 0.001); //fix rounding
+    }
+
 
 }
